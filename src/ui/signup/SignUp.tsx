@@ -57,8 +57,7 @@ export function SignUp() {
         // onSubmit={async e => onSubmit(e)}
         className="flex justify-center items-center max-w-[59.6rem] rounded-2xl shadow-xl mb-6"
       >
-        <LeftPanel />
-        <div className="py-8 px-14 flex flex-col gap-4 bg-white sm:w-1/2 h-full rounded-r-xl">
+        <div className="py-8 px-14 flex flex-col gap-4 bg-white sm:w-full h-full rounded-r-xl">
           <Header />
           <InputElements register={register} errors={errors} />
           <Footer />
@@ -144,30 +143,6 @@ function InputElements({ register, errors }: InputElements) {
           </p>
         )}
       </div>
-      {cohortId ? (
-        <div className="">
-          <Label htmlFor="cohort_id">Cohort</Label>
-          <Input
-            type="text"
-            // value={cohortId ?? ''}
-            {...register('cohort_id')}
-            autoComplete="off"
-            value={cohortId}
-            className="outline-none text-slate-400 focus:bg-none"
-          />
-        </div>
-      ) : (
-        <div className="hidden">
-          <Label htmlFor="cohort_id">Cohort</Label>
-          <Input
-            type="text"
-            // value={cohortId ?? ''}
-            {...register('cohort_id')}
-            autoComplete="off"
-            className="outline-none text-slate-400 focus:bg-none"
-          />
-        </div>
-      )}
     </main>
   )
 }
@@ -199,21 +174,4 @@ function Footer() {
   )
 }
 
-function LeftPanel() {
-  return (
-    <main className="flex-col justify-between h-full font-poppins bg-[#FBFBFF] w-1/2 p-7 rounded-l-xl sm:block hidden ">
-      <p className="text-[#495057] w-[80%] flex flex-col text-xl py-8 pl-7 tracking-wide leading-8">
-      "An investment in knowledge pays the best interest."
-        <span className="font-semibold text-[18.5px] -mt-0.5">- Benjamin Franklin</span>
-      </p>
-      <img
-        src="loginImg.png"
-        width={100}
-        height={100}
-        className="w-full h-[36vh]  pl-7 self-center"
-        // className="w-full h-[36vh]  pl-7 self-center transform scale-x-[-1]"
-        alt="login-image"
-      />
-    </main>
-  )
-}
+

@@ -51,8 +51,7 @@ export function Login() {
         // onSubmit={async e => onSubmit(e)}
         className="flex justify-center items-center max-w-[59.6rem] rounded-2xl shadow-xl mb-6"
       >
-        <LeftPanel />
-        <div className="py-8 px-14 flex flex-col gap-4 bg-white sm:w-1/2 h-full rounded-r-xl">
+        <div className="py-8 px-14 flex flex-col gap-4 bg-white sm:w-full h-full rounded-r-xl">
           <Header />
           <InputElements register={register} errors={errors} />
           <p className="w-full text-center text-red-500">
@@ -154,21 +153,3 @@ function Footer() {
   )
 }
 
-function LeftPanel() {
-  return (
-    <main className="flex-col justify-between h-full font-poppins bg-[#FBFBFF] w-1/2 p-7 rounded-l-xl sm:block hidden">
-      <p className="text-[#495057] w-[80%] flex flex-col text-xl py-8 pl-7 tracking-wide leading-8">
-        “The beautiful thing about learning is nobody can take it away from
-        you.”
-        <span className="font-semibold text-[18.5px] -mt-0.5">-B.B. King</span>
-      </p>
-      <img
-        src="loginImg.png"
-        width={100}
-        height={100}
-        className="w-full h-[36vh]  pl-7 self-center"
-        alt="login-image"
-      />
-    </main>
-  )
-}
